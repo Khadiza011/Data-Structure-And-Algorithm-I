@@ -5,4 +5,4 @@ This folder contains searching algorithms and related practice problems.
 ## Topics
 
 - Linear Search
-- Binary Search
+- Binary Search (lower_bound(), upper_bound())
