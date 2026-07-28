@@ -6,3 +6,4 @@ This folder contains searching algorithms and related practice problems.
 
 - Linear Search
 - Binary Search (lower_bound(), upper_bound())
+- Binary Search Tree
