@@ -11,3 +11,4 @@ This folder contains implementations of common sorting algorithms.
 - Merge Sort
 - Quick Sort
 - Heap Sort
+- Topological Sort
