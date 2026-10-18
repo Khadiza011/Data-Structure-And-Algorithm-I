@@ -1,9 +1,5 @@
 
 /*
- * Topic       : Max Heap
- * File        : MaxHeap.cpp
- * Language    : C++
- *
  * Description:
  * Implements a Max Heap using a normal array.
  * The largest element always stays at the root.
