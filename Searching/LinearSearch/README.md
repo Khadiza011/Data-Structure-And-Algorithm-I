@@ -109,6 +109,3 @@ After studying this implementation, beginners will understand how Linear Search 
 
 ---
 
-**Author:** Khadiza011  
-**Topic:** Data Structures and Algorithms  
-**Language:** C++
