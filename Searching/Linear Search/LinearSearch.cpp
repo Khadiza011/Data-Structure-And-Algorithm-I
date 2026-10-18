@@ -1,9 +1,5 @@
 
 /*
- * Topic       : Linear Search
- * File        : LinearSearch.cpp
- * Language    : C++
- *
  * Description:
  * Searches for a target value in an array by
  * checking each element one by one.
