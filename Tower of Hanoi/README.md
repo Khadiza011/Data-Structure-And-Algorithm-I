@@ -318,8 +318,6 @@ The Tower of Hanoi problem demonstrates how a complex task can be solved by brea
 
 By moving `n - 1` disks, transferring the largest disk, and then moving the smaller disks onto the destination rod, the recursive algorithm solves the problem in the minimum number of moves:
 
-\[
-\boxed{2^n - 1}
-\]
+2^n - 1
 
 ---
