@@ -323,9 +323,3 @@ By moving `n - 1` disks, transferring the largest disk, and then moving the smal
 \]
 
 ---
-
-**Author:** Khadiza011  
-**Repository:** Data-Structure-And-Algorithm-I  
-**Folder:** Tower of Hanoi  
-**Language:** C++  
-**Topic:** Recursion and Algorithm Analysis
