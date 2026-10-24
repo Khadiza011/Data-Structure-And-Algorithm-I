@@ -96,4 +96,236 @@ Move disk 1 from C to B
 Move disk 3 from A to C
 Move disk 1 from B to A
 Move disk 2 from B to C
-Move disk 1 from
+Move disk 1 from A to C
+
+Total moves: 7
+```
+
+Here:
+
+- `A` represents the source rod.
+- `B` represents the auxiliary rod.
+- `C` represents the destination rod.
+
+The output shows the order in which each disk must be moved to solve the puzzle.
+
+## 🔄 Step-by-Step Moves
+
+Consider a Tower of Hanoi problem with three disks.
+
+### Initial State
+
+All disks are on rod A.
+
+```text
+    |          |          |
+   [1]         |          |
+  [ 2 ]        |          |
+ [  3  ]       |          |
+========   ========   ========
+    A          B          C
+```
+
+### Move 1: Disk 1 from A to C
+
+```text
+    |          |          |
+    |          |          |
+  [ 2 ]        |          |
+ [  3  ]       |         [1]
+========   ========   ========
+    A          B          C
+```
+
+### Move 2: Disk 2 from A to B
+
+```text
+    |          |          |
+    |          |          |
+    |          |          |
+ [  3  ]      [ 2 ]      [1]
+========   ========   ========
+    A          B          C
+```
+
+### Move 3: Disk 1 from C to B
+
+```text
+    |          |          |
+    |          |         [1]
+    |          |        [ 2 ]
+ [  3  ]       |          |
+========   ========   ========
+    A          B          C
+```
+
+### Move 4: Disk 3 from A to C
+
+```text
+    |          |          |
+    |          |          |
+    |          |          |
+    |         [ 2 ]      [  3  ]
+    |         [1]        ========
+========   ========
+    A          B          C
+```
+
+### Move 5: Disk 1 from B to A
+
+```text
+    |          |          |
+    |          |          |
+   [1]         |          |
+  [ 2 ]        |        [  3  ]
+========   ========   ========
+    A          B          C
+```
+
+### Move 6: Disk 2 from B to C
+
+```text
+    |          |          |
+    |          |          |
+   [1]         |         [ 2 ]
+    |          |        [  3  ]
+========   ========   ========
+    A          B          C
+```
+
+### Move 7: Disk 1 from A to C
+
+```text
+    |          |         [1]
+    |          |        [ 2 ]
+    |          |       [  3  ]
+========   ========   ========
+    A          B          C
+```
+
+**Final Result:** All three disks have been successfully transferred from rod A to rod C.
+
+## 🔢 Minimum Number of Moves
+
+The minimum number of moves required to solve the Tower of Hanoi problem with `n` disks is:
+
+\[
+T(n) = 2^n - 1
+\]
+
+Where:
+
+- `T(n)` is the minimum number of moves.
+- `n` is the number of disks.
+
+### Examples
+
+| Number of Disks | Minimum Moves |
+|---:|---:|
+| 1 | 1 |
+| 2 | 3 |
+| 3 | 7 |
+| 4 | 15 |
+| 5 | 31 |
+| 10 | 1,023 |
+
+Each additional disk approximately doubles the number of moves required.
+
+## ⏱️ Time Complexity
+
+The recurrence relation for the algorithm is:
+
+\[
+T(n) = 2T(n-1) + 1
+\]
+
+This is because the algorithm solves two subproblems of `n - 1` disks and performs one additional move for the largest disk.
+
+Solving the recurrence gives:
+
+\[
+T(n) = 2^n - 1
+\]
+
+Therefore:
+
+**Time Complexity: `O(2^n)`**
+
+The time complexity is exponential because the number of moves grows exponentially as the number of disks increases.
+
+## 💾 Space Complexity
+
+Each recursive call reduces the number of disks by one. The maximum recursion depth is proportional to the number of disks.
+
+**Auxiliary Space Complexity: `O(n)`**
+
+This space is used by the recursive call stack. The implementation does not require an additional array to store the disks.
+
+## 🛠️ Technologies Used
+
+- **Programming Language:** C++
+- **Header File:** `<iostream>`
+- **Concepts:** Recursion, functions, base cases, recursive calls, and complexity analysis.
+
+## 🚀 How to Run
+
+1. Clone or download the repository.
+2. Open `TowerOfHanoi.cpp` in your preferred C++ editor.
+3. Compile the program:
+
+   ```bash
+   g++ -std=c++17 TowerOfHanoi.cpp -o TowerOfHanoi
+   ```
+
+4. Run the program.
+
+   **Linux / macOS**
+
+   ```bash
+   ./TowerOfHanoi
+   ```
+
+   **Windows**
+
+   ```bash
+   TowerOfHanoi.exe
+   ```
+
+To test different numbers of disks, change the value of `disks` in the `main()` function. Note that the number of moves grows exponentially, so large inputs produce very long output.
+
+## ⚠️ Important Notes
+
+- The program assumes at least one disk.
+- The three rod labels can be changed as needed.
+- The minimum number of moves is `2^n - 1`.
+- Tower of Hanoi is a classic example of a recursive algorithm.
+- For large values of `n`, printing every move can take a considerable amount of time.
+
+## 🎯 Learning Outcomes
+
+After studying this project, beginners should be able to:
+
+- Explain the Tower of Hanoi problem and its rules.
+- Understand recursion and base cases.
+- Write a recursive C++ solution.
+- Trace the movement of disks step by step.
+- Calculate the minimum number of moves.
+- Derive the time and space complexity of a recursive algorithm.
+
+## 📚 Summary
+
+The Tower of Hanoi problem demonstrates how a complex task can be solved by breaking it into smaller, similar tasks.
+
+By moving `n - 1` disks, transferring the largest disk, and then moving the smaller disks onto the destination rod, the recursive algorithm solves the problem in the minimum number of moves:
+
+\[
+\boxed{2^n - 1}
+\]
+
+---
+
+**Author:** Khadiza011  
+**Repository:** Data-Structure-And-Algorithm-I  
+**Folder:** Tower of Hanoi  
+**Language:** C++  
+**Topic:** Recursion and Algorithm Analysis
